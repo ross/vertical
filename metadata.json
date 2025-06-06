@@ -1,0 +1,8 @@
+{
+  "name": "Vertical Half",
+  "description": "Adds keybindings to allow tiling windows to the top or bottom half of a screen",
+  "uuid": "verticalhalf@xormedia.com",
+  "shell-version": [
+    "48"
+  ]
+}
