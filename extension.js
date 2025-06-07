@@ -17,10 +17,16 @@
  */
 import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 
+import {Logger} from "./lib/logger.js";
+
 export default class PlainExampleExtension extends Extension {
     enable() {
+        this.settings = this.getSettings();
+        Logger.init(this.settings);
+        Logger.info("enable");
     }
 
     disable() {
+        Logger.info("disable");
     }
 }

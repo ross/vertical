@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <schema id="org.gnome.shell.extensions.vertical_half" path="/org/gnome/shell/extensions/vertical_half/">
+        <!-- Development Settings -->
+        <key type="u" name="log-level">
+            <default>0</default>
+            <summary>
+                Provide log4j-like logging levels:
+                0 - OFF
+                1 - FATAL
+                2 - ERROR
+                3 - WARN
+                4 - INFO
+                5 - DEBUG
+                6 - TRACE
+                7 - ALL
+            </summary>
+        </key>
+        <key type="b" name="logging-enabled">
+            <default>false</default>
+            <summary>Enable logging</summary>
+        </key>
+    </schema>
+
+    <schema id="org.gnome.shell.extensions.forge.keybindings" path="/org/gnome/shell/extensions/forge/keybindings/">
+        <!-- Keybinding Settings -->
+        <key type="as" name="toggle-tiled-top">
+            <default><![CDATA[['<Super>e']]]></default>
+            <summary>Toggle tiled top half</summary>
+        </key>
+        <key type="as" name="toggle-tiled-bottom">
+            <default><![CDATA[['<Super>r']]]></default>
+            <summary>Toggle tiled bottom half</summary>
+        </key>
+    </schema>
+</schemalist>
