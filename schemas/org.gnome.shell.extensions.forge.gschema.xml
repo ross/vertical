@@ -22,7 +22,7 @@
         </key>
     </schema>
 
-    <schema id="org.gnome.shell.extensions.forge.keybindings" path="/org/gnome/shell/extensions/forge/keybindings/">
+    <schema id="org.gnome.shell.extensions.vertical_half.keybindings" path="/org/gnome/shell/extensions/vertical_half/keybindings/">
         <!-- Keybinding Settings -->
         <key type="as" name="toggle-tiled-top">
             <default><![CDATA[['<Super>e']]]></default>

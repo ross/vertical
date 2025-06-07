@@ -15,18 +15,34 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
+
+// Gnome imports
 import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 
+// extension
 import {Logger} from "./lib/logger.js";
+import {Keybindings} from "./lib/keybindings.js";
+import {WindowManager} from "./lib/window.js";
 
-export default class PlainExampleExtension extends Extension {
+export default class VerticalHalfExtension extends Extension {
     enable() {
         this.settings = this.getSettings();
         Logger.init(this.settings);
         Logger.info("enable");
+
+        this.wm = new WindowManager(this);
+        this.wm.enable();
+        this.kb = new Keybindings(this, this.wm);
+        this.kb.enable();
     }
 
     disable() {
         Logger.info("disable");
+
+        this.kb?.disable();
+        this.kb = null;
+        this.wm?.disable();
+        this.wm = null;
+        this.settings = null;
     }
 }
