@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-    <schema id="org.gnome.shell.extensions.vertical_half" path="/org/gnome/shell/extensions/vertical_half/">
+    <schema id="org.gnome.shell.extensions.verticalhalf" path="/org/gnome/shell/extensions/verticalhalf/">
         <!-- Development Settings -->
         <key type="u" name="log-level">
             <default>0</default>
@@ -22,7 +22,7 @@
         </key>
     </schema>
 
-    <schema id="org.gnome.shell.extensions.vertical_half.keybindings" path="/org/gnome/shell/extensions/vertical_half/keybindings/">
+    <schema id="org.gnome.shell.extensions.verticalhalf.keybindings" path="/org/gnome/shell/extensions/verticalhalf/keybindings/">
         <!-- Keybinding Settings -->
         <key type="as" name="toggle-tiled-top">
             <default><![CDATA[['<Super>e']]]></default>

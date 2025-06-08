@@ -2,8 +2,6 @@
   "name": "Vertical Half",
   "description": "Adds keybindings to allow tiling windows to the top or bottom half of a screen",
   "uuid": "verticalhalf@xormedia.com",
-  "settings-schema": "org.gnome.shell.extensions.vertical_half",
-  "shell-version": [
-    "48"
-  ]
+  "settings-schema": "org.gnome.shell.extensions.verticalhalf",
+  "shell-version": ["45", "46", "47", "48"]
 }
