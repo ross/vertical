@@ -1,33 +1,33 @@
 {
-  "name": "Vertical Half",
-  "version": "0.0.1",
-  "description": "Adds keybindings to allow tiling windows to the top or bottom half of a screen",
-  "main": "extension.js",
-  "sourceType": "module",
-  "scripts": {
-    "test": "prettier --list-different \"./**/*.{js,jsx,ts,tsx,json}\"",
-    "prepare": "husky install",
-    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ross/vertical-half.git"
-  },
-  "keywords": [
-    "gnome",
-    "vertical half",
-    "tiling",
-    "javascript",
-    "gnome-shell"
-  ],
-  "author": "Ross McFarland",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/ross/vertical-half/issues"
-  },
-  "homepage": "https://github.com/ross/vertical-half",
-  "devDependencies": {
-    "husky": "^8.0.1",
-    "prettier": "^2.7.1"
-  }
+    "name": "Vertical Half",
+    "version": "0.0.1",
+    "description": "Adds keybindings to allow tiling windows to the top or bottom half of a screen",
+    "main": "extension.js",
+    "sourceType": "module",
+    "scripts": {
+        "test": "prettier --list-different \"./**/*.{js,jsx,ts,tsx,json}\"",
+        "prepare": "husky install",
+        "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ross/vertical-half.git"
+    },
+    "keywords": [
+        "gnome",
+        "vertical half",
+        "tiling",
+        "javascript",
+        "gnome-shell"
+    ],
+    "author": "Ross McFarland",
+    "license": "GPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/ross/vertical-half/issues"
+    },
+    "homepage": "https://github.com/ross/vertical-half",
+    "devDependencies": {
+        "husky": "^8.0.1",
+        "prettier": "^2.7.1"
+    }
 }

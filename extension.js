@@ -20,15 +20,15 @@
 import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 // extension
-import {Logger} from "./lib/logger.js";
-import {Keybindings} from "./lib/keybindings.js";
-import {WindowManager} from "./lib/window.js";
+import {Logger} from './lib/logger.js';
+import {Keybindings} from './lib/keybindings.js';
+import {WindowManager} from './lib/window.js';
 
 export default class VerticalHalfExtension extends Extension {
     enable() {
         this.settings = this.getSettings();
         Logger.init(this.settings);
-        Logger.info("enable");
+        Logger.info('enable');
 
         this.wm = new WindowManager(this);
         this.wm.enable();
@@ -37,7 +37,7 @@ export default class VerticalHalfExtension extends Extension {
     }
 
     disable() {
-        Logger.info("disable");
+        Logger.info('disable');
 
         this.kb?.disable();
         this.kb = null;

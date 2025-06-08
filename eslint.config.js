@@ -63,10 +63,10 @@ export default [
             ],
             // See: https://eslint.org/docs/latest/rules/#suggestions
             'block-scoped-var': 'error',
-            'complexity': 'warn',
+            complexity: 'warn',
             'consistent-return': 'error',
             'default-param-last': 'error',
-            'eqeqeq': 'error',
+            eqeqeq: 'error',
             'no-array-constructor': 'error',
             'no-caller': 'error',
             'no-extend-native': 'error',
@@ -140,7 +140,8 @@ export default [
             'no-restricted-syntax': [
                 'error',
                 {
-                    selector: 'MethodDefinition[key.name="_init"] CallExpression[arguments.length<=1][callee.object.type="Super"][callee.property.name="_init"]',
+                    selector:
+                        'MethodDefinition[key.name="_init"] CallExpression[arguments.length<=1][callee.object.type="Super"][callee.property.name="_init"]',
                     message: 'Use constructor() and super()',
                 },
             ],
