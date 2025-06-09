@@ -24,7 +24,7 @@ import {Logger} from './lib/logger.js';
 import {Keybindings} from './lib/keybindings.js';
 import {WindowManager} from './lib/window.js';
 
-export default class VerticalHalfExtension extends Extension {
+export default class VerticalExtension extends Extension {
     enable() {
         this.settings = this.getSettings();
         Logger.init(this.settings);

@@ -1,7 +1,7 @@
 {
-    "name": "Vertical Half",
+    "name": "Vertical",
     "version": "0.0.1",
-    "description": "Adds keybindings to allow tiling windows to the top or bottom half of a screen",
+    "description": "Adds keybindings to allow tiling windows to the top or bottom of a screen. Similar to the built-in left and right. Particually useful for portrait monitors",
     "main": "extension.js",
     "sourceType": "module",
     "scripts": {
@@ -11,11 +11,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ross/vertical-half.git"
+        "url": "git+https://github.com/ross/vertical.git"
     },
     "keywords": [
         "gnome",
-        "vertical half",
+        "vertical",
+        "portrait",
         "tiling",
         "javascript",
         "gnome-shell"
@@ -23,9 +24,9 @@
     "author": "Ross McFarland",
     "license": "GPL-3.0-or-later",
     "bugs": {
-        "url": "https://github.com/ross/vertical-half/issues"
+        "url": "https://github.com/ross/vertical/issues"
     },
-    "homepage": "https://github.com/ross/vertical-half",
+    "homepage": "https://github.com/ross/vertical",
     "devDependencies": {
         "husky": "^8.0.1",
         "prettier": "^2.7.1"

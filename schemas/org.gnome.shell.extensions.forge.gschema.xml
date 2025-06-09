@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-    <schema id="org.gnome.shell.extensions.verticalhalf" path="/org/gnome/shell/extensions/verticalhalf/">
+    <schema id="org.gnome.shell.extensions.vertical" path="/org/gnome/shell/extensions/vertical/">
         <!-- Development Settings -->
         <key type="u" name="log-level">
             <default>0</default>
@@ -22,15 +22,17 @@
         </key>
     </schema>
 
-    <schema id="org.gnome.shell.extensions.verticalhalf.keybindings" path="/org/gnome/shell/extensions/verticalhalf/keybindings/">
+    <schema id="org.gnome.shell.extensions.vertical.keybindings" path="/org/gnome/shell/extensions/vertical/keybindings/">
         <!-- Keybinding Settings -->
-        <key type="as" name="toggle-tiled-top">
-            <default><![CDATA[['<Super>e']]]></default>
-            <summary>Toggle tiled top half</summary>
+        <key type="as" name="cycle-tiled-top">
+            <default><![CDATA[['<Super><Shift>Up']]]></default>
+            <summary>Cycle tiled top</summary>
+            <description>Snap the focused window to the top of the screen and make it fill the top half. If already in the top half position, resize it to the top third. If already in the top third, resize it to the top two thirds.</description>
         </key>
-        <key type="as" name="toggle-tiled-bottom">
-            <default><![CDATA[['<Super>r']]]></default>
-            <summary>Toggle tiled bottom half</summary>
+        <key type="as" name="cycle-tiled-bottom">
+            <default><![CDATA[['<Super><Shift>Down']]]></default>
+            <summary>Cycle tiled bottom</summary>
+            <description>Snap the focused window to the bottom of the screen and make it fill the bottom half. If already in the bottom half position, resize it to the bottom third. If already in the bottom third, resize it to the bottom two thirds.</description>
         </key>
     </schema>
 </schemalist>
