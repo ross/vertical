@@ -20,6 +20,11 @@
             <default>false</default>
             <summary>Enable logging</summary>
         </key>
+        <key type="d" name="secondary-split">
+            <default>0.4</default>
+            <range min="0.01" max="0.99"/>
+            <summary>Secondary split percentage, 0-1. It will be used first as specified and then its inverse 1-[value] will be used next.</summary>
+        </key>
     </schema>
 
     <schema id="org.gnome.shell.extensions.vertical.keybindings" path="/org/gnome/shell/extensions/vertical/keybindings/">
@@ -27,12 +32,12 @@
         <key type="as" name="cycle-tiled-top">
             <default><![CDATA[['<Super><Control>Up']]]></default>
             <summary>Cycle split top</summary>
-            <description>Snap the focused window to the top of the screen and make it fill the top half. If already in the top half position, resize it to the top third. If already in the top third, resize it to the top two thirds.</description>
+            <description>Snap the focused window to the top of the screen and make it fill the top half. If already in the top half position, resize it to the [secondary-split]. If already in the top [secondary-split], resize it to the top [100 - secondary-split].</description>
         </key>
         <key type="as" name="cycle-tiled-bottom">
             <default><![CDATA[['<Super><Control>Down']]]></default>
             <summary>Cycle split bottom</summary>
-            <description>Snap the focused window to the bottom of the screen and make it fill the bottom half. If already in the bottom half position, resize it to the bottom third. If already in the bottom third, resize it to the bottom two thirds.</description>
+            <description>Snap the focused window to the bottom of the screen and make it fill the bottom half. If already in the bottom half position, resize it to the [secondary-split]. If already in the bottom [secondary-split], resize it to the bottom [100 - secondary-split].</description>
         </key>
     </schema>
 </schemalist>
