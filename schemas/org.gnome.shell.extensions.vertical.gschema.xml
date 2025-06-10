@@ -25,13 +25,13 @@
     <schema id="org.gnome.shell.extensions.vertical.keybindings" path="/org/gnome/shell/extensions/vertical/keybindings/">
         <!-- Keybinding Settings -->
         <key type="as" name="cycle-tiled-top">
-            <default><![CDATA[['<Super><Shift>Up']]]></default>
-            <summary>Cycle tiled top</summary>
+            <default><![CDATA[['<Super><Control>Up']]]></default>
+            <summary>Cycle split top</summary>
             <description>Snap the focused window to the top of the screen and make it fill the top half. If already in the top half position, resize it to the top third. If already in the top third, resize it to the top two thirds.</description>
         </key>
         <key type="as" name="cycle-tiled-bottom">
-            <default><![CDATA[['<Super><Shift>Down']]]></default>
-            <summary>Cycle tiled bottom</summary>
+            <default><![CDATA[['<Super><Control>Down']]]></default>
+            <summary>Cycle split bottom</summary>
             <description>Snap the focused window to the bottom of the screen and make it fill the bottom half. If already in the bottom half position, resize it to the bottom third. If already in the bottom third, resize it to the bottom two thirds.</description>
         </key>
     </schema>
