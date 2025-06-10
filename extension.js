@@ -26,13 +26,16 @@ import {WindowManager} from './lib/window.js';
 
 export default class VerticalExtension extends Extension {
     enable() {
-        this.settings = this.getSettings();
-        Logger.init(this.settings);
+        const settings = this.getSettings();
+        Logger.init(settings);
         Logger.info('enable');
 
-        this.wm = new WindowManager(this);
+        this.wm = new WindowManager(this, settings);
         this.wm.enable();
-        this.kb = new Keybindings(this, this.wm);
+        const kbSettings = this.getSettings(
+            'org.gnome.shell.extensions.vertical.keybindings'
+        );
+        this.kb = new Keybindings(this.wm, kbSettings);
         this.kb.enable();
     }
 
@@ -43,6 +46,5 @@ export default class VerticalExtension extends Extension {
         this.kb = null;
         this.wm?.disable();
         this.wm = null;
-        this.settings = null;
     }
 }
