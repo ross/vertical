@@ -3,5 +3,5 @@
     "description": "Adds keybindings to allow tiling windows to the top or bottom of a screen. Similar to the built-in left and right. Particually useful for portrait monitors",
     "uuid": "vertical@xormedia.com",
     "settings-schema": "org.gnome.shell.extensions.vertical",
-    "shell-version": ["45", "46", "47", "48"]
+    "shell-version": ["45", "46", "47", "48", "49", "50"]
 }
