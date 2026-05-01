@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-ROOT="$SCRIPT_DIR/.."
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SHEXLI="$ROOT/env/bin/shexli"
 
 UUID=$(python3 -c "import json; print(json.load(open('$ROOT/metadata.json'))['uuid'])")

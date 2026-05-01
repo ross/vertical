@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+SCRIPTS="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+UUID=$(python3 -c "import json; print(json.load(open('$ROOT/metadata.json'))['uuid'])")
+EXTENSIONS_DIR="$HOME/.local/share/gnome-shell/extensions"
+TARGET="$EXTENSIONS_DIR/$UUID"
+
+"$SCRIPTS/compile-schemas"
+
+mkdir -p "$EXTENSIONS_DIR"
+
+if [ -L "$TARGET" ] && [ "$(readlink "$TARGET")" = "$ROOT" ]; then
+    echo "Symlink already correct: $TARGET -> $ROOT"
+else
+    ln -sfn "$ROOT" "$TARGET"
+    echo "Symlinked: $TARGET -> $ROOT"
+fi
