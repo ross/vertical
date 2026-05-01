@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$SCRIPT_DIR/.."
+SHEXLI="$ROOT/env/bin/shexli"
+
+UUID=$(python3 -c "import json; print(json.load(open('$ROOT/metadata.json'))['uuid'])")
+OUT="$ROOT/$UUID.zip"
+
+cd "$ROOT"
+rm -f "$OUT"
+zip -r "$OUT" \
+    extension.js \
+    metadata.json \
+    lib/ \
+    schemas/ \
+    --exclude "schemas/gschemas.compiled"
+
+echo "Created $OUT"
+
+"$SHEXLI" "$OUT"
