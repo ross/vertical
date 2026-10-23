@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+UUID=$(python3 -c "import json; print(json.load(open('$ROOT/metadata.json'))['uuid'])")
+OUT="$ROOT/$UUID.zip"
+
+: "${EGO_USERNAME:?EGO_USERNAME must be set}"
+: "${EGO_PASSWORD:?EGO_PASSWORD must be set}"
+
+if [ ! -f "$OUT" ]; then
+    echo "$OUT not found, run script/bundle first" >&2
+    exit 1
+fi
+
+# Pass the password on stdin so it doesn't show up in the process list
+printf '%s' "$EGO_PASSWORD" | gnome-extensions upload \
+    --user="$EGO_USERNAME" \
+    --password-file=- \
+    --accept-tos \
+    "$OUT"
