@@ -1,7 +1,7 @@
 {
     "name": "Vertical",
-    "version": "0.0.1",
-    "description": "Adds keybindings to allow tiling windows to the top or bottom of a screen. Similar to the built-in left and right. Particually useful for portrait monitors",
+    "version": "0.0.2",
+    "description": "Adds keybindings to allow tiling windows to the top or bottom of a screen. Similar to the built-in left and right. Particularly useful for portrait monitors",
     "main": "extension.js",
     "sourceType": "module",
     "scripts": {
